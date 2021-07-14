@@ -1,0 +1,130 @@
+nav{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 40px;
+    min-height: 5em;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    .logo{
+        flex-grow: 1.5;
+        font-family: 'Gelasio', serif;
+        span{
+            color: #CDCD43;
+        }
+        a{
+            text-decoration: none;
+            color: white;
+            padding: 30px;
+        }
+    }
+
+    .nav-links a{
+        padding: 30px;
+    }
+
+    ul{
+        display: flex;
+        justify-content: space-between;
+        flex-grow: 2;
+        a{
+            text-decoration: none;
+        }
+     
+    }
+
+    .hamburger{
+        transition: all .3s ease;
+        width: 10%;
+        cursor: pointer;
+        background: transparent;
+        border: none;
+        img{
+            width: 100%;
+        }
+
+        &:focus{
+            outline: 5px auto Highlight;
+            outline: 5px auto -webkit-focus-ring-color;
+        }
+    }
+
+}
+
+.line{
+    height: 10px;
+    width: 200%;
+    background-color: #CDCD43;
+    position: absolute;
+    bottom: 0;
+    transform: translateX(-50%);
+}
+
+.hero{
+    width: 100%;
+    position: relative;
+    max-height: 600px;
+    
+    h2{
+        position: absolute;
+        bottom: 50%;
+        left: 50%;
+        transform: translate(-50%,50%);
+        font-size: .3 * 20vw;
+        font-family: 'Gelasio', serif;
+    }
+    img{
+        width: 100%;
+    }
+
+    .menu{
+        position: absolute;
+        padding: 2em 0;
+        width: 100%;
+        top: 0;
+        right: 0;
+        height: 60vh;
+        background-color: #545454;
+        z-index: 333;
+        display: flex;
+        transform: translateX(100%);
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        // transform: translateX(100%);
+        // transition: transform  .6s cubic-bezier(0, 0.55, 0.45, 1);
+        .close{
+            position: absolute;
+            top: 0;
+            right: 0;
+            min-height: 44px;
+            min-width: 44px;
+            padding: 2.5em 2.5em;
+            cursor: pointer;
+            background: transparent;
+            border: none;
+        }
+        li{
+            position: relative;
+            margin: 2.5em 0;
+            list-style-type: none;
+            a{
+                text-decoration: none;
+                color: white;
+                font-size: 1em;
+                display: block;
+                min-width: 44px;
+                min-height: 44px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                &:focus{
+                    outline: 5px auto Highlight;
+                    outline: 5px auto -webkit-focus-ring-color;
+                }
+            }
+
+            
+        }
+    }
+}

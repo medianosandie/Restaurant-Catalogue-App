@@ -1,0 +1,228 @@
+@media screen and (max-width: 540px) {
+    .card-group-2 li{
+        grid-template-areas: 
+        'image image'
+        'name name'
+        'city city'
+        'rating rating'
+        'description description'
+        ;
+        img{grid-area: image;}
+        h4{grid-area: name;}
+        h5{grid-area: city;}
+        .rating{
+            grid-area: rating;
+            grid-column: 1/2;
+            margin-left: 2em;
+            margin-top: 10px;
+            max-width: 100px;
+        }
+        p{grid-area: description;}
+    }
+}
+
+@media screen and (max-width: 640px){
+    .card-group-1 li{
+        grid-template-columns: .2fr 1fr .3fr;
+        grid-template-areas: 
+            'num image  image'
+            'num name favourite'
+            'num rating favourite'
+        ;
+        margin-bottom: 10px;
+        padding: 30px;
+        h4{margin-top: 10px;}
+        h4,.rating{padding: 0;}
+        img{width: 100%;}
+        .favourite{
+            padding-right: 10px;
+            grid-area: favourite;
+        }
+
+        img{grid-area: image;}
+        span{grid-area: num;}
+        h4{grid-area: name;}
+        .favourite{grid-area: favourite;}
+
+    }
+
+    
+    
+}
+
+
+@media screen and (max-width: 727px){
+
+    .section-1, .section-2, .section-3 {
+        img{
+            width: 80%;
+            margin: 0 auto;
+        }
+    }
+    section p{
+        font-size: 1em;
+        margin: 3em 0;
+    }
+
+   
+
+    .card-group-2 p{
+        margin: 1em 0;
+    }
+}
+
+@media screen and (max-width: 847px){
+    .nav-links{
+        display: none;
+    }
+
+    .card-group-1 img{
+        width: 100%;
+    }
+
+}
+
+@media screen and (min-width: 576px){
+    
+
+    .line{
+        height: 10px;
+    }
+    
+
+    .nav-links{
+        display: flex;
+    }
+
+    .hamburger{
+        display: none !important;
+    }
+
+    .card-group-2 .rating{
+        margin: 10px;
+    }
+
+}
+
+@media screen and (min-width: 727px){
+   
+    *,*::before,*::after{
+        font-size: .1 * 20vw;
+    }
+
+    section p{
+        align-self: center;
+    }
+
+    .section-4,.section-5{
+        display: flex;
+        flex-direction: column;
+    }
+
+    section{
+        display: flex;
+        align-items: center;
+        padding: 3em 80px 4em;
+        p{
+            margin-top: 1em;
+            width: 90%;
+            padding-left: 0;
+            
+        }
+    }
+
+    .card-group-2 p{
+        margin: 0;
+        width: 100%;
+    }
+
+    .section-2{
+        flex-direction: row-reverse;
+        p{
+            margin-left: 3rem;
+        }
+    }
+    
+}
+
+@media screen and (min-width: 847px){
+
+    nav{
+        padding: 1.5em 120px;
+        
+        .nav-links{  
+            font-size: 10px;
+        }
+    }
+
+
+    .card-group-2{
+        padding-left: 0;
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+
+        li{
+            margin: 15px;
+        }
+    }
+
+    .hero{
+        overflow: hidden;
+    }
+
+    .hero h2{
+        font-size: 2.3em;
+    }
+
+   
+
+
+}
+
+@media screen and (min-width: 992px){
+    
+    nav{
+        font-size: 20px;
+    }
+
+    .hero{
+        height: 85vh;
+    }
+
+    section p{
+        margin: 0 2em;
+        font-size: .8em;
+      
+    }
+
+    h4{
+        font-size: .8em;
+    }
+
+    h5{
+        font-size: .7em;
+    }
+    
+}
+
+@media screen and (min-width: 1200px){
+
+    .section-4{
+        width: 1200px;
+        margin: 0 auto;
+    }
+
+    .card-group-1 li {
+        grid-template-columns: .15fr 350px 1fr .25fr;
+    }
+
+    .card-group-2{
+        display: grid;
+        grid-template-columns: repeat(auto-fill,minmax(400px,1fr));
+    }
+
+    .section-1 , .section-2 , .section-3 {
+        width: 1200px;
+        margin: 0 auto;
+    } 
+}

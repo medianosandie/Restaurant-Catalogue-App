@@ -1,0 +1,7 @@
+node_modules
+
+dist
+
+# this file is not included
+# because it contains api related information
+config.js

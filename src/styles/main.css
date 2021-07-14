@@ -1,0 +1,309 @@
+.section-1 img, .section-2 img, .section-3 img {
+  width: 50%;
+}
+
+.section-2::before, .section-4::before {
+  content: '';
+  top: 0;
+  z-index: -1;
+  background-color: #545454;
+  position: absolute;
+  height: 100%;
+}
+
+.section-2::before {
+  -webkit-transform: translateX(20%);
+          transform: translateX(20%);
+}
+
+.section-4 h3, .section-5 h3 {
+  font-family: 'Gelasio', serif;
+}
+
+.card-group-1 li {
+  font-family: 'Gelasio', serif;
+  padding: 1.5em 3em;
+  margin-bottom: 2em;
+  border-radius: 20px;
+  background-color: #1D1D1D;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: .15fr 1fr 1fr .25fr;
+      grid-template-columns: .15fr 1fr 1fr .25fr;
+      grid-template-areas: 'num image name favourite' 'num image rating favourite';
+}
+
+.card-group-1 li img {
+  border-radius: 10px;
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: image;
+  margin-top: 0;
+  width: 100%;
+  -ms-flex-item-align: center;
+      align-self: center;
+  padding: .2em;
+}
+
+.card-group-1 li * {
+  margin-right: .2em;
+}
+
+.card-group-1 li span {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 1;
+  grid-area: num;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.card-group-1 li h4 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: name;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  padding-left: 40px;
+  padding-bottom: 10px;
+  font-family: 'Gelasio', serif;
+  font-weight: bold;
+  font-size: .9em;
+}
+
+.card-group-1 li .rating {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 2;
+  grid-area: rating;
+  padding-left: 40px;
+}
+
+.card-group-1 li .favourite {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 4;
+  grid-area: favourite;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.card-group-2 li {
+  background: #545454;
+  margin-bottom: 2em;
+  border-radius: 20px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr .5fr;
+      grid-template-columns: 1fr .5fr;
+      grid-template-areas: 'image image' 'name rating' 'city rating' 'description description';
+}
+
+.card-group-2 li .name {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: name;
+  padding-left: 2rem;
+  font-family: 'Gelasio', serif;
+  font-weight: bold;
+  font-size: large;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
+
+.card-group-2 li .city {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: city;
+  padding-left: 2rem;
+  padding-top: 5px;
+  font-weight: lighter;
+  font-family: 'Gelasio', serif;
+  font-size: medium;
+}
+
+.card-group-2 li .rating {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 2;
+  grid-area: rating;
+  -ms-flex-item-align: center;
+      align-self: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-right: 2rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  background-color: #1D1D1D;
+  border-radius: 10px;
+  padding: 1em;
+  height: 70px;
+}
+
+.card-group-2 li .rating h5 {
+  margin-right: 10px;
+}
+
+.card-group-2 li .rating img {
+  margin-bottom: 0;
+  width: 30%;
+  min-width: 30px;
+}
+
+.card-group-2 li p {
+  font-size: 18px;
+  font-weight: 400;
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: description;
+  padding: 1rem 2rem 2rem;
+}
+
+.card-group-2 li img {
+  width: 100%;
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: image;
+  margin-top: 0;
+  margin-bottom: 1em;
+}
+
+.hide {
+  display: none !important;
+}
+
+.restaurant {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-column-gap: 12px;
+          column-gap: 12px;
+}
+
+.restaurant .restaurant-name {
+  font-weight: bold;
+}
+
+.restaurant .restaurant-name, .restaurant .rating, .restaurant .city, .restaurant .address, .restaurant .description, .restaurant .category, .restaurant .menus, .restaurant .customer-reviews {
+  margin-bottom: 1rem;
+}
+
+.restaurant .customer-reviews li {
+  border-left: solid white 5px;
+  padding-left: 10px;
+  margin-bottom: .5rem;
+}
+
+.restaurant .description p, .restaurant .menus span {
+  padding-left: 10px;
+}
+
+.restaurant img {
+  width: 100%;
+  margin: 1rem auto;
+}
+
+.restaurant .menus h5 {
+  margin-top: .25rem;
+}
+
+.restaurant .customer-reviews h4 {
+  margin-top: .25rem;
+}
+
+#add-review-btn {
+  color: #1D1D1D;
+  padding: 1rem;
+  font-weight: 600;
+}
+
+.comment-box {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: .3fr 1fr;
+      grid-template-columns: .3fr 1fr;
+      grid-template-areas: 'name-label name-input' 'review-label review-input' 'button-group button-group';
+}
+
+.comment-box #username-label {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: name-label;
+}
+
+.comment-box #review-label {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: review-label;
+}
+
+.comment-box #username {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: name-input;
+}
+
+.comment-box #user-review {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: review-input;
+}
+
+.comment-box #button-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: button-group;
+}
+
+.comment-box #review-label, .comment-box #user-review {
+  margin: .5rem 0;
+}
+
+.comment-box label {
+  color: white;
+}
+
+.comment-box input, .comment-box textarea {
+  width: 100%;
+}
+
+.comment-box button {
+  color: #1D1D1D;
+  margin-right: 1rem;
+  padding: 1rem;
+  font-weight: 600;
+}
+
+.content {
+  min-height: 50vh;
+  margin: 2rem;
+}
+
+.content h2 {
+  text-align: center;
+  margin: 2rem;
+}
+
+.content li {
+  overflow: hidden;
+}
+/*# sourceMappingURL=main.css.map */

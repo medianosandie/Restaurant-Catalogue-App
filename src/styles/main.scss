@@ -1,0 +1,225 @@
+
+.section-1, .section-2, .section-3 {
+    img{width: 50%;}
+}
+
+.section-2::before , .section-4::before{
+    content: '';
+    top: 0;
+    z-index: -1;
+    background-color: #545454;
+    position: absolute;
+    height: 100%;
+}
+
+.section-2::before{transform: translateX(20%);}
+
+.section-4 h3 , .section-5 h3{
+    font-family: 'Gelasio', serif;
+}
+
+.card-group-1 {
+    
+    
+    li{
+        font-family: 'Gelasio', serif;
+        padding: 1.5em 3em;
+        margin-bottom: 2em;
+        border-radius: 20px;
+        background-color: #1D1D1D;
+        display: grid;
+        grid-template-columns: .15fr 1fr 1fr .25fr;
+        grid-template-areas: 
+            'num image name favourite'
+            'num image rating favourite';
+        img{
+            border-radius: 10px;
+            grid-area: image;
+            margin-top: 0;
+            width: 100%;
+            align-self: center;
+            padding: .2em;
+        }
+
+        *{
+            margin-right: .2em;
+        }
+
+        span{
+            grid-area: num;
+            align-self: center;
+        }
+        h4{
+            grid-area: name;
+            align-self: flex-end;
+            padding-left: 40px;
+            padding-bottom: 10px;
+            font-family: 'Gelasio', serif;
+            font-weight: bold;
+            font-size: .9em;
+        }
+        .rating{
+            grid-area: rating;
+            padding-left: 40px;
+        }
+        .favourite{
+            grid-area: favourite;
+            cursor: pointer;
+            margin-left: 10px;
+        }
+    }
+}
+
+.card-group-2 li{
+    background: #545454;
+    margin-bottom: 2em;
+    border-radius: 20px;
+    display: grid;
+    grid-template-columns: 1fr .5fr;
+    grid-template-areas: 
+        'image image'
+        'name rating'
+        'city rating'
+        'description description'
+    ;
+
+    .name{
+        grid-area: name;
+        padding-left: 2rem;
+        font-family: 'Gelasio', serif;
+        font-weight: bold;
+        font-size: large;
+        align-self: flex-end;
+    }
+
+    .city{
+        grid-area: city;
+        padding-left: 2rem;
+        padding-top: 5px;
+        font-weight: lighter;
+        font-family: 'Gelasio', serif;
+        font-size: medium;
+    }
+    .rating{
+        grid-area: rating;
+        align-self: center;
+        display: flex;
+        margin-right: 2rem;
+        align-items: center;
+        justify-content: space-around;
+        background-color: #1D1D1D;
+        border-radius: 10px;
+        padding: 1em;
+        height: 70px;
+        h5{margin-right: 10px;}
+        img{
+            margin-bottom: 0;
+            width: 30%;
+            min-width: 30px;
+        }
+    }
+    p{
+        font-size: 18px;
+        font-weight: 400;
+        grid-area: description;
+        padding: 1rem 2rem 2rem;
+    }
+    img{
+        width: 100%;
+        grid-area: image;
+        margin-top: 0;
+        margin-bottom: 1em;
+    }
+}
+
+.hide{
+    display: none !important;
+}
+
+.restaurant{
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    column-gap: 12px;
+    .restaurant-name{
+        font-weight: bold;
+    }
+    .restaurant-name,.rating,.city,.address,.description,.category,.menus,.customer-reviews{
+        margin-bottom: 1rem;
+    }
+    .customer-reviews li{
+        border-left: solid white 5px;
+        padding-left: 10px;
+        margin-bottom: .5rem;
+    }
+
+    .description p, .menus span{
+        padding-left: 10px;
+    }
+    img{
+        width: 100%;
+        margin: 1rem auto;
+    }
+    .menus h5{
+        margin-top: .25rem;
+    }
+    .customer-reviews h4{
+        margin-top: .25rem;
+    }
+}
+
+#add-review-btn{
+    color: #1D1D1D;
+    padding: 1rem;
+    font-weight: 600;
+}
+
+.comment-box{
+    display: grid;
+    grid-template-columns: .3fr 1fr;
+    grid-template-areas: 
+        'name-label name-input'
+        'review-label review-input'
+        'button-group button-group';
+    #username-label{grid-area: name-label;}
+    #review-label{grid-area: review-label;}
+    #username{grid-area: name-input;}
+    #user-review{grid-area: review-input;}
+    #button-group{
+        display: flex;
+        grid-area: button-group;
+    }
+    #review-label,#user-review{margin: .5rem 0;}
+    label{
+        color: white;
+    }
+    input,textarea{
+        width: 100%;
+    }
+    button{
+        color: #1D1D1D;
+        margin-right: 1rem;
+        padding: 1rem;
+        font-weight: 600;
+    }
+}
+
+.content{
+    min-height: 50vh;
+    margin: 2rem;
+    h2{
+        text-align: center;
+        margin: 2rem;
+    }
+    li{
+        overflow: hidden;
+    }
+}
+
+
+
+
+
+
